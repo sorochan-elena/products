@@ -10,11 +10,6 @@ class IndexController extends BaseController {
         $this->render('catalog', $this->getCatalog($_GET));
     }
 
-    public function task()
-    {
-        $this->render('task');
-    }
-
     /**
      * Отображение каталога товаров при AJAX запросе     
      */
