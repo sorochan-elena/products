@@ -20,7 +20,8 @@ class Loader {
      * 
      * @param  array $paths Массив путей
      */
-    public function registerPaths($paths){
+    public function registerPaths($paths)
+    {
     	if (count($paths > 0)) {
     		foreach ($paths as $path) {
 	            $path = realpath($path);
@@ -37,7 +38,8 @@ class Loader {
      * @param  stirng $class Название класса
      * @return bool Возвращает true если файл класса найден и включен, false - в случае ошибки
      */
-    public static function load($class) {
+    public static function load($class)
+    {
         $classPath = $class . ".php"; // Do whatever logic here
 
         if (count(self::$paths)) {
@@ -55,7 +57,8 @@ class Loader {
     /**
      * Регистрация автозагрузчика
      */
-    public function register(){
+    public function register()
+    {
         spl_autoload_register([
             'Loader',
             'load'

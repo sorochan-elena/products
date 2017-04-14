@@ -16,12 +16,6 @@ function processingAction($url)
     return $url;
 }
 
-function pa($v){
-    echo '<pre>';
-    print_r($v);
-    echo '</pre>';
-}
-
 function getPagination($currentPage, $count, $countOnePage) {
     if (!$currentPage) {
         $currentPage = 1; 

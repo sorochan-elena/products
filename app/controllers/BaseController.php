@@ -47,7 +47,8 @@ class BaseController {
     /**
      * Отображает 404-ую страницу, если страница не найдена
      */
-    public function notFound(){
+    public function notFound()
+    {
         http_response_code(404);
         $this->render('404');
     }

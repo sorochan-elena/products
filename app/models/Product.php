@@ -154,7 +154,8 @@ class Product {
      * 
      * @return string Текст статуса
      */
-    public function getStatusLabel(){
+    public function getStatusLabel()
+    {
         switch ($this->status) {
             case self::IN_STOCK:
                 return 'В наличии';

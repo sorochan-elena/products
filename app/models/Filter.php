@@ -19,7 +19,8 @@ class Filter {
 	 * @param  bool   $noRecursive Использовать рекурсию при фильтрации или нет (если передан массив в $value)
 	 * @return mixed  Отфильтрованное значение
 	 */
-	public function sanitize($value, $filters, $noRecursive = false) {		
+	public function sanitize($value, $filters, $noRecursive = false)
+    {		
 		if (is_array($filters)) {
 			if (!is_null($value)){
 				foreach ($filters as $filter) {
@@ -54,7 +55,8 @@ class Filter {
 	 *
 	 * Используется в функции Filter::sanitize()
 	 */
-	protected function _sanitize($value, $filter){
+	protected function _sanitize($value, $filter)
+    {
 
 		switch ($filter) {
 

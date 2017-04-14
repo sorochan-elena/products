@@ -94,7 +94,8 @@ class Catalog {
      * 
      * @param integer $value Порядковый номер
      */
-    public function setOffset($value) {
+    public function setOffset($value)
+    {
         if ($value >= 0) {
             $this->offset = $value;
         }
@@ -107,7 +108,8 @@ class Catalog {
      * 
      * @return array Массив результатов
      */
-    private function fetch(){
+    private function fetch()
+    {
         $query = 'SELECT id, name, price, status, description 
                   FROM products';
 

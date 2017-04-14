@@ -5,18 +5,21 @@ class IndexController extends BaseController {
     /**
      * Отображение каталога товаров
      */
-    public function index(){
+    public function index()
+    {
         $this->render('catalog', $this->getCatalog($_GET));
     }
 
-    public function task(){
+    public function task()
+    {
         $this->render('task');
     }
 
     /**
      * Отображение каталога товаров при AJAX запросе     
      */
-    public function getCatalogAjax(){
+    public function getCatalogAjax()
+    {
 
     	$data = $this->getCatalog($_POST);
 
@@ -88,7 +91,8 @@ class IndexController extends BaseController {
     /**
      * Редактирование товара
      */
-    public function editProductAjax(){
+    public function editProductAjax()
+    {
 
         if (isset($_POST['id'])){
         	$id = intval($_POST['id']);
@@ -113,7 +117,8 @@ class IndexController extends BaseController {
     /**
      * Удаление товара
      */
-    public function deleteProductAjax(){
+    public function deleteProductAjax()
+    {
 
         if (isset($_POST['id'])){
         	$id = intval($_POST['id']);
@@ -141,7 +146,8 @@ class IndexController extends BaseController {
      * В случае если товар найден и является удаленным, его можно восстановить
      * 
      */
-    public function recoverProductAjax(){
+    public function recoverProductAjax()
+    {
 
         if (isset($_POST['id'])){
         	$id = intval($_POST['id']);
@@ -165,7 +171,8 @@ class IndexController extends BaseController {
     /**
      * Сохранение товара
      */
-    public function saveProductAjax(){
+    public function saveProductAjax()
+    {
 
         // check fields existance
         foreach (['id', 'name', 'description', 'price', 'status'] as $field){
