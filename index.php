@@ -1,7 +1,8 @@
 <?php
 
-require_once './app/loader.php';
-require_once './app/lib.php';
+require_once __DIR__ . '/app/lib.php';
+require_once __DIR__ . '/app/loader.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 // контроллер
 $filter = new Filter();
